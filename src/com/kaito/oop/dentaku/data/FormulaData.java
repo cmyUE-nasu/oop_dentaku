@@ -7,28 +7,21 @@ public class FormulaData {
     public static final int DIVISION    = -2;   //除算
     public static final int EQUAL       = 0;    //結果
 
-    private int value;
-    private int calculationSymbol;
+    private double value;
+    private final int calculationSymbol;
 
-    public int getValue(){
+    public double getValue(){
         return this.value;
     }
-    public void setValue(int value){
+    public void setValue(double value){
         this.value = value;
     }
 
     public int getCalculationSymbol(){
         return this.calculationSymbol;
     }
-    public void setCalculationSymbol(int calculationSymbol){
-        if (calculationSymbol >= -2 && calculationSymbol <= 2) {
-            this.calculationSymbol = calculationSymbol;
-        } else {
-            throw new IllegalArgumentException("不正な値の代入");
-        }
-    }
 
-    public FormulaData(int value, int calculationSymbol){
+    public FormulaData(double value, int calculationSymbol){
         this.value = value;
         this.calculationSymbol = calculationSymbol;
     }

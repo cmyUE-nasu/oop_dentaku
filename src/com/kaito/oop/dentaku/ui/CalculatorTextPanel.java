@@ -13,9 +13,8 @@ JPanelを継承している
 渡された表示を表示するだけのクラス
  */
 public class CalculatorTextPanel extends JPanel{
-    private SpringLayout layout;
-    private JLabel inputValueLabel;
-    private JLabel formulaLabel;
+    private final JLabel inputValueLabel;
+    private final JLabel formulaLabel;
 
     //表示中の計算式を変更するメソッド
     public void setInputValue(int input){
@@ -46,7 +45,7 @@ public class CalculatorTextPanel extends JPanel{
     //コンストラクタ
     public CalculatorTextPanel() {
         //JLabelのインスタンス化
-        layout = new SpringLayout();
+        SpringLayout layout = new SpringLayout();
         this.setLayout(layout);
         formulaLabel = new JLabel();
         inputValueLabel = new JLabel();
