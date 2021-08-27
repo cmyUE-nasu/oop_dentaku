@@ -26,9 +26,6 @@ public class CalculatorFrame extends JFrame {
                 if (answerFlag) onClickClear();
                 //入力パネルで入力された数字を出力パネルに適用する
                 outputText.setInputValue(inputButtons.getValue());
-                //TODO デバッグ用なので削除する
-                System.out.println(inputButtons.getValue());
-                System.out.println(formula);
             }
 
             @Override
@@ -43,9 +40,6 @@ public class CalculatorFrame extends JFrame {
                 }
                 formula.add(newFormulaData);
                 outputText.addFormula(newFormulaData);
-                //TODO デバッグ用なので消す
-                System.out.println("+");
-                System.out.println(formula);
             }
 
             @Override
@@ -60,9 +54,6 @@ public class CalculatorFrame extends JFrame {
                 }
                 formula.add(newFormulaData);
                 outputText.addFormula(newFormulaData);
-                //TODO デバッグ用なので消す
-                System.out.println("-");
-                System.out.println(formula);
             }
 
             @Override
@@ -77,9 +68,6 @@ public class CalculatorFrame extends JFrame {
                 }
                 formula.add(newFormulaData);
                 outputText.addFormula(newFormulaData);
-                //TODO デバッグ用なので消す
-                System.out.println("*");
-                System.out.println(formula);
             }
 
             @Override
@@ -94,9 +82,6 @@ public class CalculatorFrame extends JFrame {
                 }
                 formula.add(newFormulaData);
                 outputText.addFormula(newFormulaData);
-                //TODO デバッグ用なので消す
-                System.out.println("/");
-                System.out.println(formula);
             }
 
             @Override
@@ -110,9 +95,6 @@ public class CalculatorFrame extends JFrame {
                 //計算した答えを表示
                 outputText.setAnswer(lastAnswer);
                 answerFlag = true;
-                //TODO デバッグ用なので消す
-                System.out.println("=");
-                System.out.println(formula);
             }
 
             @Override
@@ -121,9 +103,6 @@ public class CalculatorFrame extends JFrame {
                 formula.clear();
                 outputText.clear();
                 answerFlag = false;
-                //TODO デバッグ用なので消す
-                System.out.println("clear");
-                System.out.println(formula);
             }
         });
 

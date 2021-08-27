@@ -8,8 +8,6 @@ public class Calculator {
     public static double calculate(List<FormulaData> formula){
         int count = 0;
 
-        // TODO デバッグ用なので消す
-        System.out.println(formula.toString());
 
         //乗算と除算を計算する
         while (formula.get(count).getCalculationSymbol() != FormulaData.EQUAL){
@@ -38,9 +36,6 @@ public class Calculator {
             }
         }
 
-        // TODO デバッグ用なので消す
-        System.out.println(formula);
-
         // もう一度式の最初から計算する為にカウンターをリセット
         count = 0;
 
@@ -64,9 +59,6 @@ public class Calculator {
                     break;
             }
         }
-
-        // TODO デバッグ用なので消す
-        System.out.println(formula);
 
         return formula.get(0).getValue();
     }

@@ -25,6 +25,10 @@ public class CalculatorTextPanel extends JPanel{
         inputValueLabel.setText("式を入力: ");
     }
 
+    public void setMessage(String text){
+        inputValueLabel.setText(text);
+    }
+
     //計算式に式を追加するメソッド
     public void addFormula(FormulaData newFormula){
         formulaLabel.setText(formulaLabel.getText() + newFormula.toString());
